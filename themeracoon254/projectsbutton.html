@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisitButton</title>
+</head>
+<body>
+  <style>
+    body{
+      background-color: black;
+    }
+    button{
+      display: flex;
+      padding: 10px;
+      border-radius: 20px;
+      width: 130px;
+      height: 30px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 300ms;
+      position: relative;
+      isolation: isolate;
+    }
+    button::after{
+      content: "";
+      position: absolute;
+      right: 3px;
+      background-color: #008aff;
+      width: 25px;
+      height: 25px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      border-radius: 50%;
+      z-index: -1;
+      transition: all 300ms;
+}
+
+button:hover{
+  color: white;
+}
+
+button:hover::after{
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.icon{
+  color: white;
+}
+  </style>
+  <button>
+Visit site
+<span class="icon">
+
+  <svg 
+  xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 24 24" 
+   width="10"
+   height="10"
+   fill="currentColor"
+   >
+   <path 
+   d="M12 13H4V11H12V4L20 12L12 20V13Z">
+
+   </path></svg>
+</span>
+  </button>
+</body>
+</html>

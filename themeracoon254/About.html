@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AboutMe😂Bethwel | Developer</title>
+  <link rel="website icon" type="jpeg" href="./assets/images/bethwelK.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/trial.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+    <a href="Home.html"><img class="logo-image" src="assets/images/logo-light.png" alt="Bethwel3001's logo">
+    </a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+                        <!-- Dark mode toggle -->
+        <abbr title="Change theme"><button type="button" data-theme-toggle aria-label="Change to light theme">
+            Change to theme
+        </button></abbr>
+        </ul>
+    </div>
+</header>
+<!-- <div class="main"> -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img class="user-image" src="assets/images/bethwelK.jpeg"
+          alt="Bethwel3001's image">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+
+            Iam a self-tought Software Developer still schooling at University level.
+            Iam persuing computer Science and Mathematics at Co-operative University of Kenya.
+
+          </p>
+
+          <!-- js for about me animation -->
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills:</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience:</p>
+            <p class="tab-links" onclick="opentab('education')">Education:</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>  
+              <li><span>Web Dev:</span><br>~Building of robust responsive websites</li>
+              <li><span>MS Office:</span><br>~Iam skilled in office applications like Accsess </li>
+              <li><span>2023:To date</span><br>~Problem solving skills - Solving problems technically</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2023:</span><br>~Brilliant front head developer skilled in  html ,Css and javascript</li>
+              <li><span>2021-2023:</span><br>~highly skillled in office applications like acess and excel</li>
+              <li><span>2023 to date:</span><br>~Proffecient in python and its libraries like pandas</li>
+
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2023 to Date:</span><br>~Schooling at Cooperative University Of kenya </li>
+              <li><span>2021-2022:</span><br>~I did a course in software packages and Linux </li>
+            </ul>
+          </div></div> </div></div></div>
+        
+        <!-- </div> -->
+
+<!-- image right -->
+<div class="right">
+  <div class="rectangle">
+  </div>
+  <div class="circle">
+  </div>
+</div>
+
+<!-- js components -->
+<script src="assets/js/script.js"></script>
+<script src="assets/js/theme.js"></script>
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+  </script>
+</body>
+</html>
